@@ -7,6 +7,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.util.Base64;
 
 public class JetBrainsUtil {
+
     private static final String JETBRAINS_PRIVATE_KEY=
             "MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAt5yrcHAAjhglnCEn"+
             "6yecMWPeUXcMyo0+itXrLlkpcKIIyqPw546bGThhlb1ppX1ySX/OUA4jSakHekNP"+
@@ -26,16 +27,16 @@ public class JetBrainsUtil {
             signature.initSign(privateK);
             signature.update(data.getBytes());
             byte[] sign = signature.sign();
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < sign.length; i++) {
                 int v = sign[i] & 0xFF;
                 String hv = Integer.toHexString(v);
                 if (hv.length() < 2) {
-                    stringBuilder.append(0);
+                    sb.append(0);
                 }
-                stringBuilder.append(hv);
+                sb.append(hv);
             }
-            return stringBuilder.toString();
+            return sb.toString();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

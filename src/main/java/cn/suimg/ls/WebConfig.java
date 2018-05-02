@@ -17,7 +17,7 @@ import cn.suimg.ls.filter.IndexFilter;
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	/**
-	 * ÅäÖÃÊ×Ò³¹ıÂËÆ÷
+	 * é¦–é¡µè¿‡æ»¤å™¨
 	 * @return
 	 */
 	@Bean

@@ -46,7 +46,9 @@ public class ActivateController {
     @RequestMapping(value="obtainTicket.action",produces={"text/xml; charset=UTF-8"})
     @ResponseBody
     public Object obtainTicket(String salt,String userName){
-        String data=String.format(OBTAIN_TICKET_TEMPLATE,salt,"suimg");
+        //想授权给谁就可以修改后面的字符串。可以为任意字符
+        //就是不能有中文!就是不能有中文!就是不能有中文!
+        String data = String.format(OBTAIN_TICKET_TEMPLATE,salt,"suimg");
         String sign = String.format(SIGN_TEMPLATE,JetBrainsUtil.sign(data));
         return sign+data;
     }

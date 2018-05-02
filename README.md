@@ -5,20 +5,25 @@ JetBrains-License-Server
 IDEA,PHPStorm,WebStorm 等编辑器激活服务器源代码
 
 #### 软件架构
-软件架构说明
+框架采用Spring Boot+Spring MVC
+无任何业务其他处理逻辑，代码简洁清晰
+一句话概括原理就是:
+激活的过程中会访问一个接口，然后这个接口返回一个XML 给这个XML使用PEM私钥签名 就完成激活。
+签名证书反编译自 https://www.jetbrains.com/help/license_server/downloading.html
+想挑战的童鞋可以试试，我觉得还是挺有难度的。[:滑稽]
 
 
-#### 安装教程
+#### 依赖环境
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. JDK1.8
+2. Maven
 
-#### 使用说明
+#### 安装说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. git clone https://gitee.com/Suimg/JetBrains-License-Server.git
+2. cd JetBrains-License-Server
+3. mvn package
+4. java -jar target/license-server.jar
 
 #### 参与贡献
 
