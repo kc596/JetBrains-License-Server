@@ -1,5 +1,18 @@
 # JetBrains-License-Server
 
+## About ths project
+this project is written by suimg (chinese)
+and i'm a java program engineer work in Bei Jing
+so this project originally is used for myself
+but in the near future.When I looked at the program log, I found many foreign IPs.
+So I decided to bring this originally open source project to GitHub.I hope to help more foreigners.
+Project in China: https://gitee.com/Suimg/JetBrains-License-Server.git
+If you want to know more information, you can also visit my personal website https://www.suimg.cn I look forward to your visit.
+And if you have WeChat or QQ you can also add me as a friend.
+WeChat: smg_pub
+QQ: 2544976756
+Remarks: From GitHub
+
 ## About the new version of the editor can not be activated
 * Due to changes in the activation system of JetBrains' new editor, the program is not available in the new version.
 * The key was obtained after downloading the activation program, but now you must purchase the certificate through the official channel.
@@ -28,7 +41,7 @@ The 2.0 version optimizes and succinctly processes the program, and the pom file
 
 #### Instructions for use
 
-1. git clone https://gitee.com/Suimg/JetBrains-License-Server.git
+1. git clone https://github.com/SuimgCn/JetBrains-License-Server.git
 2. cd JetBrains-License-Server
 3. mvn package
 4. java -Dserver.port=80 -jar target/license-server.jar suimg
