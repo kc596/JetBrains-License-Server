@@ -39,12 +39,16 @@ The 2.0 version optimizes and succinctly processes the program, and the pom file
 1. JDK1.8
 2. Maven
 
-#### Instructions for use
+#### Instructions for use (Ubuntu 16.04 minimal GCP)
 
-1. git clone https://github.com/SuimgCn/JetBrains-License-Server.git
-2. cd JetBrains-License-Server
-3. mvn package
-4. java -Dserver.port=80 -jar target/license-server.jar suimg
+1. sudo apt-get update
+2. sudo apt install maven
+3. sudo apt-get install default-jdk
+4. JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+5. git clone https://github.com/SuimgCn/JetBrains-License-Server.git
+6. cd JetBrains-License-Server
+7. mvn package
+8. sudo java -Dserver.port=80 -jar target/license-server.jar suimg
 
 
 #### Background process
