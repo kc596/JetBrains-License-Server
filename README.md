@@ -45,15 +45,15 @@ The 2.0 version optimizes and succinctly processes the program, and the pom file
 2. sudo apt install maven
 3. sudo apt-get install default-jdk
 4. JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-5. git clone https://github.com/SuimgCn/JetBrains-License-Server.git
+5. git clone https://github.com/kc596/JetBrains-License-Server.git
 6. cd JetBrains-License-Server
 7. mvn package
-8. sudo java -Dserver.port=80 -jar target/license-server.jar suimg
+8. sudo java -Dserver.port=80 -jar target/license-server.jar Kunal
 
 
 #### Background process
 ##### starting program
-1. nohup java -Dserver.port=80 -jar target/license-server.jar suimg >ls.log 2>&1 &
+1. sudo nohup java -Dserver.port=80 -jar target/license-server.jar Kunal >ls.log 2>&1 &
 ##### Ending the program
 1. ps -def |grep target/license-server.jar|awk '{print $2}'|xargs kill -9
 
